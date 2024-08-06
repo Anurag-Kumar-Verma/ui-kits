@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Kits</title>
+    <link rel="stylesheet" href="/public/css/variables.css" />
+    <link rel="stylesheet" href="/public/css/main.css" />
+    <script src="/public/js/main.js" defer></script>
+    <script src="/public/js/popover.js" defer></script>
+</head>
+
+<body>
+    <header id="mainHeader">
+        <nav class="navbar">
+            <div class="container">
+                <div class="brand">
+                    <a href="/">UI Kits</a>
+                </div>
+                <button class="navToggle" id="navToggle" data-toggle="mainNav-collapse">
+                    &Cross;
+                </button>
+                <div class="navbar-collapse" id="mainNav-collapse">
+                    <ul class="navbar-menu"></ul>
+                    <div class="userSec"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="root">
+        <section>
+            <div class="filterDiv">
+                <div class="card filterCard" id="filter1">
+                    <div class="close_btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.4" clip-path="url(#clip0_7_48)">
+                                <path d="M18 6L6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6 6L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_7_48">
+                                    <rect width="24" height="24" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="searchDiv">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_7_6)">
+                                <path d="M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M21 21L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_7_6"><rect width="24" height="24" fill="white" /></clipPath>
+                            </defs>
+                        </svg>
+                        <input type="text" placeholder="Search" onkeyup="searchFilter1(event)" />
+                    </div>
+                    <div class="card-content">
+                        
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="resetBtn actionBtn">Rest</button>
+                        <button type="button" class="okBtn actionBtn">Show Results</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="loginSec" class="loginSec">
+            <div class="card-outer">
+                <div class="card login_card_1">
+                    <div class="card-body">
+                        <div class="card_title">Join the community</div>
+                        <p class="small subTitle">Take your art to the next level. Get it seen by millions of people.</p>
+
+                        <form>
+                            <div class="control-div">
+                                <input type="text" class="form-control" placeholder="First Name" id="firstNameCtrl" name="firstName" aria-label="First Name">
+                            </div>
+                            <div class="control-div">
+                                <input type="text" class="form-control" placeholder="Last Name" id="lastNameCtrl" name="lastName" aria-label="Last Name">
+                            </div>
+                            <div class="control-div">
+                                <input type="email" class="form-control" placeholder="Email" id="emailCtrl" autocomplete="off" name="email" aria-label="Email">
+                            </div>
+                            <div class="control-div">
+                                <input type="password" class="form-control" autocomplete="off" placeholder="Password" id="passwordCtrl" name="password" aria-label="Password">
+                            </div>
+                            <button type="submit" class="formBtn submitBtn">Create New Account</button>
+                        </form>
+
+                        <p class="declimar">By joining, you agree to our Terms of Service and Privacy Policy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="multipleProfiles" class="multipleProfiles">
+            <div class="container">
+                <div class="wrapper">
+                    <h2 class="sectionTitle">Select your profile</h2>
+                    <h5>Logged in users can view full business profiles and can save contact details.</h5>
+
+                    <div class="usersList"></div>
+                </div>
+            </div>
+        </section>
+        <section id="users_list_2" class="users_list_2">
+            <div class="container">
+                <h2 class="sectionTitle">Users</h2>
+                <div class="headerSec">
+                    <div class="searchDiv">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_7_7)">
+                                <path d="M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M21 21L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_7_7"><rect width="24" height="24" fill="white" /></clipPath>
+                            </defs>
+                        </svg>
+                        <input type="text" placeholder="Search users" onkeyup="searchUser(event)" />
+                    </div>
+
+                    <div id="users_filter_tabs">
+                        <nav class="nav nav-tabs">
+                            <button class="tab active btn-clear" data-user-type="All">All</button>
+                            <button class="tab btn-clear" data-user-type="Active">Active</button>
+                            <button class="tab btn-clear" data-user-type="In-Active">In-Active</button>
+                        </nav>
+                    </div>
+                </div>
+                <div class="usersList"></div>
+            </div>
+        </section>
+        <section id="people_list_1" class="people_list_1">
+            <div class="container">
+                <h2 class="sectionTitle">Our Staff</h2>
+                <div class="usersList"></div>
+            </div>
+        </section>
+        <section id="profile_card_2" class="profile_card_2">
+            <div class="container">
+                <div class="card profileCard2">
+                    <div class="card-body">
+                        <div class="avatar">
+                            <span>IG</span>
+                        </div>
+                        <p class="user_name truncateText">Ildiko Gaspar</p>
+                        <p class="role"><small>UX Designer</small></p>
+
+                        <div class="card-actions">
+                            <div class="action editAction">
+                                <span class="icon editIcon"></span>
+                                <small>Edit Profile</small>
+                            </div>
+                            <div class="action optionAction popover">
+                                <span class="icon ellipsisIcon"></span>
+                                <small>More</small>
+                                <div class="popover-menu">
+                                    <div class="menu-item">Change Language</div>
+                                    <div class="menu-item">FAQ</div>
+                                    <div class="menu-item">Change Passwprd</div>
+                                    <div class="menu-item">View Profile</div>
+                                    <div class="menu-item">Work Info</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer id="mainFooter"></footer>
+</body>
+
+</html>
